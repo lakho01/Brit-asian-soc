@@ -1,0 +1,185 @@
+<?php 
+session_start();
+
+  include("connection.php");
+  include("functions.php");
+
+  $user_data = check_login($con);
+?>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Account Page</title>
+  <meta charset="utf-8">
+  <style type="text/css">
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0; font-family: Arial, Helvetica, sans-serif;
+    }
+
+    .header {
+      padding-top: 415px;
+      padding-bottom: 5px;
+      text-align: center;
+      font-size: 40px;
+      color: black;
+
+    }
+
+    .topnav {
+      overflow: hidden; 
+      background-color:#333;
+      height: 50px;
+    }
+    
+    .topnav a {
+      float: right;
+      color: #f2f2f2;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+      font-size: 17px;
+      height: 50px;
+      }
+    
+    .topnav a:hover {
+      background-color: #ddd;
+      color: black;
+      height: 50px;
+    }
+    
+    .topnav a.active {
+      background-color: #04AA6D;
+      color: white;
+      height: 50px;
+    }
+
+    /*for user photo*/
+    .photo {
+      float: left;
+      width: 35%;
+      height: 410px;
+      padding-left: 15%;
+      padding-right: 5px;
+      padding-top: 5px;
+      padding-bottom: 5px;
+      text-align: center;
+    }
+
+    /*for user personal details*/
+    .userpfile {
+      /*float: left;*/
+      margin: auto;
+      padding-left: 5px;
+      position: relative;
+      padding-right: 15%;
+      padding-top: 5px;
+      padding-bottom: 5px;
+      width: 50%;
+      background-color: #f1f1f1;
+      height: 410px;
+    }
+
+    /*for history posts*/
+    .postta {
+      background-color: #f1f1f1;
+      font-size: 20px;
+      height: 150px;
+      padding: 10px;
+      width: 70%;
+      margin-left: 15%;
+      margin-right: 15%;
+      /*margin-top: 10px;*/
+    }
+
+    /*box in the post section*/
+    .box{
+      
+    }
+
+    footer {
+      background-color: #777;
+      padding: 10px;
+      text-align: center;
+      color: white;
+    }
+  </style>
+
+
+
+</head>
+<body>
+<div class="topnav">
+    <img src="images/logo_bas.jpg" style="width:100px;height:75px;" >
+      <div class="topnav-right">
+          <!-- <a href="#">Home</a>
+          <a href="#">Store</a>
+          <a href="#">Flatmate Finder</a>
+          <a href="#">About</a>
+          <a href="#">Contact Us</a>
+          <a class="active" href="#"><span class="glyphicon glyphicon-log-in"></span> Account</a> -->
+      </div>
+</div>
+
+<a class="btn btn-info fredokaFont" style="float: right;" href="logout.php">Logout</a><br><br>
+  <section>
+<!--     <div class="photo">
+
+      <img src="img/photo.jpg" alt="user photo" wight:; height="400px">
+
+    </div> -->
+    
+    <div class="userpfile">
+      <h1 style="font-size: 40px;">Welcome to BAS Ticket Store</h1>
+      
+      <table style="font-size: 30px;">
+        <tbody>
+          <tr>
+            <!-- <td>Tickets:</td> -->
+
+              <h3>Tickets</h3>
+              <hr>
+
+              <a href="mockshaadi.php">Mock Shaadi Tickets</a><br><br>(10th June, 2022)
+
+            <!-- <td><?php echo $user_data['first_name']; ?> <?php echo $user_data['last_name']; ?></td> -->
+          </tr>
+        </tbody>
+        <tbody>
+          <tr>
+            <!-- <td>Email:</td> -->
+            <!-- <td><?php echo $user_data['email']; ?></td> -->
+          </tr>
+        </tbody>
+        <tfoot>
+          <!-- <tr>
+            <td>Brief Intro:</td>
+            <td>An angry kitten</td>
+          </tr> -->
+        </tfoot>
+      </table>
+    </div>
+  </section>
+
+
+  <!-- <br><h1 class="header">History Posts</h1>
+  <hr style="text-align: center;width: 70%;">
+
+  <div>
+    <table class="postta">
+      <tbody>
+       
+
+      </table>
+  </div> -->
+
+  <!-- <footer>
+    <p>Footer</p>
+  </footer> -->
+
+</body>
+</html>
